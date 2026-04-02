@@ -11,13 +11,13 @@ body {
   font-family: Arial, sans-serif;
 
   background-image: 
-    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.85)),
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)),
     url("./Hintergrund1.jpg");
 
-  background-size: contain;
-  background-color: black; /* damit Ränder nicht hässlich sind */
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: black;
 
   min-height: 100vh;
 
@@ -27,6 +27,13 @@ body {
 
   color: white;
   text-align: center;
+}
+
+/* Mobile Fix → zeigt komplettes Bild */
+@media (max-width: 600px) {
+  body {
+    background-size: contain;
+  }
 }
 
 .container {
