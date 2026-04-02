@@ -9,15 +9,6 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-
-  background: black;
-
-  /* Bild als eigenes Layer */
-  background-image: url("./Hintergrund1.jpg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-
   min-height: 100vh;
 
   display: flex;
@@ -26,16 +17,32 @@ body {
 
   color: #eaeaea;
   text-align: center;
+
+  position: relative;
+  overflow: hidden;
 }
 
+/* 🔥 Blur Hintergrund (füllt alles) */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
 
-  background: linear-gradient(rgba(5,10,20,0.6), rgba(0,0,0,0.9));
-  
-  pointer-events: none;
+  background: url("./Hintergrund1.jpg") center/cover no-repeat;
+  filter: blur(30px) brightness(0.4) scale(1.1);
+
+  z-index: -2;
+}
+
+/* 🔥 Scharfes Bild (immer komplett sichtbar) */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background: url("./Hintergrund1.jpg") center/contain no-repeat;
+
+  z-index: -1;
 }
 
 /* Mobile Fix → zeigt komplettes Bild */
