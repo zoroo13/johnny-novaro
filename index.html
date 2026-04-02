@@ -11,13 +11,13 @@ body {
   font-family: Arial, sans-serif;
 
   background-image: 
-    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)),
+    linear-gradient(rgba(5,10,20,0.6), rgba(0,0,0,0.95)),
     url("./Hintergrund1.jpg");
 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: black;
+  background-color: #000;
 
   min-height: 100vh;
 
@@ -25,33 +25,38 @@ body {
   justify-content: center;
   align-items: center;
 
-  color: white;
+  color: #eaeaea;
   text-align: center;
 }
 
-/* Mobile Fix → zeigt komplettes Bild */
+/* Mobile Fix */
 @media (max-width: 600px) {
   body {
     background-size: contain;
   }
 }
 
+/* Container */
 .container {
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
+  background: rgba(10,15,25,0.6);
   padding: 30px 20px;
   max-width: 400px;
   width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0,255,198,0.15);
 }
 
+/* Logo */
 .profile {
-  width: 160px;
+  width: 150px;
   margin: 0 auto 20px auto;
-  border-radius: 25px;
+  border-radius: 20px;
   overflow: hidden;
 
   box-shadow: 
-    0 0 30px #00ffcc,
-    0 0 60px #ff00ff;
+    0 0 25px #00FFC6,
+    0 0 50px rgba(0,255,198,0.4);
 
   animation: float 3s ease-in-out infinite;
 }
@@ -61,41 +66,44 @@ body {
   display: block;
 }
 
+/* Animation */
 @keyframes float {
   0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  50% { transform: translateY(-8px); }
   100% { transform: translateY(0px); }
 }
 
+/* Name */
 h1 {
-  font-size: 42px;
-  color: #00ffcc;
+  font-size: 38px;
+  color: #00FFC6;
 
   text-shadow: 
-    0 0 10px #00ffcc,
-    0 0 30px #00ffcc,
-    0 0 60px #00ffcc;
+    0 0 10px #00FFC6,
+    0 0 30px rgba(0,255,198,0.6);
 
   margin-bottom: 10px;
 }
 
+/* Text */
 p {
-  font-size: 16px;
-  opacity: 0.9;
+  font-size: 15px;
+  color: #bfbfbf;
   margin-bottom: 20px;
 }
 
+/* Buttons */
 .link {
   display: block;
   margin: 10px auto;
-  padding: 15px;
+  padding: 14px;
   max-width: 320px;
 
-  background: rgba(0, 0, 0, 0.6);
-  color: #00ffcc;
+  background: rgba(15,20,30,0.7);
+  color: #00FFC6;
   text-decoration: none;
   border-radius: 12px;
-  border: 1px solid #00ffcc55;
+  border: 1px solid rgba(0,255,198,0.2);
 
   backdrop-filter: blur(8px);
   transition: 0.3s;
@@ -103,22 +111,24 @@ p {
 }
 
 .link:hover {
-  background: #00ffcc;
+  background: #00FFC6;
   color: black;
-  box-shadow: 0 0 25px #00ffcc;
+  box-shadow: 0 0 20px #00FFC6;
   transform: scale(1.05);
 }
 
+/* Section */
 .section {
   margin-top: 25px;
 }
 
+/* Fade */
 .fade {
-  animation: fadeIn 1.5s ease;
+  animation: fadeIn 1.2s ease;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
+  from { opacity: 0; transform: translateY(15px); }
   to { opacity: 1; transform: translateY(0); }
 }
 </style>
@@ -130,14 +140,14 @@ p {
 
   <!-- LOGO -->
   <div class="profile">
-    <img src="Profil_Logo.jpg">
+    <img src="Pero_logo.png">
   </div>
 
   <!-- NAME -->
-  <h1>johnny novaro 🎤</h1>
+  <h1>Pero030 🎤</h1>
 
   <!-- TEXT -->
-  <p>🎧 Artist, Songwriter, Producer. 🎧</p>
+  <p>Emotionaler Deutschrap 🎧</p>
 
   <!-- LINKS -->
   <a class="link" href="https://open.spotify.com/artist/43EAMHfe3WlkgnJPKNDka6" target="_blank">🎵 Spotify</a>
@@ -150,9 +160,9 @@ p {
   <!-- YOUTUBE VIDEO -->
   <div class="section">
     <iframe width="100%" height="180" 
-    src="https://www.youtube.com/embed/ZAYXKv5kwaA" 
+    src="https://www.youtube.com/embed/pZixQDe22rs" 
     frameborder="0" allowfullscreen
-    style="border-radius:12px; box-shadow:0 0 20px #00ffcc;"></iframe>
+    style="border-radius:12px; box-shadow:0 0 15px rgba(0,255,198,0.4);"></iframe>
   </div>
 
   <!-- SPOTIFY PLAYER -->
