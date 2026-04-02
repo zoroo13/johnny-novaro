@@ -10,14 +10,13 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
 
-  background-image: 
-    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)),
-    url("./Hintergrund1.jpg");
+  background: black;
 
-  background-size: cover;
+  /* Bild als eigenes Layer */
+  background-image: url("./Hintergrund1.jpg");
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: black;
 
   min-height: 100vh;
 
@@ -25,8 +24,18 @@ body {
   justify-content: center;
   align-items: center;
 
-  color: white;
+  color: #eaeaea;
   text-align: center;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background: linear-gradient(rgba(5,10,20,0.6), rgba(0,0,0,0.9));
+  
+  pointer-events: none;
 }
 
 /* Mobile Fix → zeigt komplettes Bild */
