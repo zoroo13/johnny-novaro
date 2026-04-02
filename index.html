@@ -24,7 +24,6 @@ body {
   overflow-y: auto;
 }
 
-/* Blur Background */
 body::before {
   content: "";
   position: fixed;
@@ -36,7 +35,6 @@ body::before {
   z-index: -2;
 }
 
-/* Sharp Image */
 body::after {
   content: "";
   position: fixed;
@@ -47,14 +45,12 @@ body::after {
   z-index: -1;
 }
 
-/* Mobile Fix → zeigt komplettes Bild */
 @media (max-width: 600px) {
   body {
     background-size: contain;
   }
 }
 
-/* Container */
 .container {
   backdrop-filter: blur(12px);
   background: rgba(10,15,25,0.6);
@@ -65,7 +61,6 @@ body::after {
   box-shadow: 0 0 40px rgba(0,255,198,0.15);
 }
 
-/* Logo */
 .profile {
   width: 150px;
   margin: 0 auto 20px auto;
@@ -84,14 +79,12 @@ body::after {
   display: block;
 }
 
-/* Animation */
 @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-8px); }
   100% { transform: translateY(0px); }
 }
 
-/* Name */
 h1 {
   font-size: 38px;
   color: #00FFC6;
@@ -103,14 +96,12 @@ h1 {
   margin-bottom: 10px;
 }
 
-/* Text */
 p {
   font-size: 15px;
   color: #bfbfbf;
   margin-bottom: 20px;
 }
 
-/* Buttons */
 .link {
   display: block;
   margin: 10px auto;
@@ -135,12 +126,10 @@ p {
   transform: scale(1.05);
 }
 
-/* Section */
 .section {
   margin-top: 25px;
 }
 
-/* Fade */
 .fade {
   animation: fadeIn 1.2s ease;
 }
@@ -156,18 +145,14 @@ p {
 
 <div class="container fade">
 
-  <!-- LOGO -->
   <div class="profile">
     <img src="Profil_Logo.jpg">
   </div>
 
-  <!-- NAME -->
   <h1>Johnny Novaro</h1>
 
-  <!-- TEXT -->
   <p>Artist • Songwriter • Producer</p>
 
-  <!-- LINKS -->
   <a class="link" href="https://open.spotify.com/artist/43EAMHfe3WlkgnJPKNDka6" target="_blank">🎵 Spotify</a>
   <a class="link" href="https://music.youtube.com/channel/UCFnEawHh_EMCr81fnCRqQGA" target="_blank">🎬 YouTube Music</a>
   <a class="link" href="https://on.soundcloud.com/4atiRQucz2TZP7d9eG" target="_blank">☁️ SoundCloud</a>
@@ -175,7 +160,6 @@ p {
   <a class="link" href="https://music.apple.com/de/artist/johnny-novaro/1834055187" target="_blank">🍎 Apple Music</a>
   <a class="link" href="https://www.instagram.com/johnny_novaro" target="_blank">📸 Instagram</a>
 
-  <!-- YOUTUBE VIDEO -->
   <div class="section">
     <iframe width="100%" height="180" 
     src="https://www.youtube.com/embed/ZAYXKv5kwaA"
@@ -183,12 +167,13 @@ p {
     style="border-radius:12px; box-shadow:0 0 15px rgba(0,255,198,0.4);"></iframe>
   </div>
 
-  <!-- SPOTIFY PLAYER -->
   <div class="section">
     <iframe style="border-radius:12px" 
     src="https://open.spotify.com/embed/artist/43EAMHfe3WlkgnJPKNDka6" 
     width="100%" height="80" frameBorder="0" allowfullscreen></iframe>
   </div>
+
+  <div class="footer">© Johnny Novaro</div>
 
 </div>
 
